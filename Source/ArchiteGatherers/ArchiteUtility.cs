@@ -1,4 +1,4 @@
-using System.Linq;
+using System.Collections.Generic;
 using RimWorld;
 using Verse;
 
@@ -25,6 +25,25 @@ namespace ArchiteGatherers
             return false;
         }
 
+        // Суммируем все вложенные в гены пешки архиты (включая подавленные)
+        public static int CountArchites(Pawn pawn)
+        {
+            List<Gene> genes = pawn?.genes?.GenesListForReading;
+            if (genes == null) return 0;
+
+            int totalArchites = 0;
+            for (int i = 0; i < genes.Count; i++)
+            {
+                Gene gene = genes[i];
+                if (gene != null && gene.def.biostatArc > 0)
+                {
+                    totalArchites += gene.def.biostatArc;
+                }
+            }
+
+            return totalArchites;
+        }
+
         public static bool CanExtractFrom(Corpse corpse, out string failReason)
         {
             failReason = null;
@@ -48,8 +67,7 @@ namespace ArchiteGatherers
                 return false;
             }
 
-            bool hasArchiteGenes = innerPawn.genes?.GenesListForReading?.Any(g => g.def.biostatArc > 0) == true;
-            if (!hasArchiteGenes)
+            if (CountArchites(innerPawn) <= 0)
             {
                 failReason = "AG_NoArchiteGenes".Translate();
                 return false;

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
-	<AG_ExtractMenuOption>Откачать архиты из {0}</AG_ExtractMenuOption>
+	<AG_ExtractMenuOption>Откачать архиты из {0} ({1} шт.)</AG_ExtractMenuOption>
 	<AG_ExtractMenuDisabled>Нельзя откачать архиты из {0}: {1}</AG_ExtractMenuDisabled>
 	<AG_NotHumanlike>не человек</AG_NotHumanlike>
 	<AG_CorpseRotted>труп сгнил</AG_CorpseRotted>
 	<AG_AlreadyDrained>архиты уже откачаны</AG_AlreadyDrained>
 	<AG_NoArchiteGenes>нет генов архитов</AG_NoArchiteGenes>
-	<AG_ExtractionSuccess>{0} откачивает капсулу с архитами из трупа {1}.</AG_ExtractionSuccess>
+	<AG_ExtractionSuccess>{0} откачивает капсулы с архитами ({2} шт.) из трупа {1}.</AG_ExtractionSuccess>
 </LanguageData>

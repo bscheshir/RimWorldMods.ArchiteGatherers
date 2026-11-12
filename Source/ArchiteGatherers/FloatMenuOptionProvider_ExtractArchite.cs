@@ -44,7 +44,8 @@ namespace ArchiteGatherers
             else
             {
                 Pawn localPawn = pawn;
-                opt = new FloatMenuOption("AG_ExtractMenuOption".Translate(corpse.LabelShort), () =>
+                int count = ArchiteUtility.CountArchites(corpse.InnerPawn);
+                opt = new FloatMenuOption("AG_ExtractMenuOption".Translate(corpse.LabelShort, count), () =>
                 {
                     Job job = JobMaker.MakeJob(AG_DefOf.AG_ExtractArchiteFromCorpse, corpse);
                     localPawn.jobs.TryTakeOrderedJob(job, JobTag.Misc);
