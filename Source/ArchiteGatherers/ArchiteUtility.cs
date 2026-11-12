@@ -25,7 +25,6 @@ namespace ArchiteGatherers
             return false;
         }
 
-        // 1. Фильтруем гены и возвращаем новый список ссылок на архитовые гены
         public static List<Gene> GetArchiteGenes(Pawn pawn)
         {
             List<Gene> result = new List<Gene>();
@@ -44,7 +43,6 @@ namespace ArchiteGatherers
             return result;
         }
 
-        // 2. Проходим по списку ссылок и считаем сумму архитов
         public static int CountArchites(Pawn pawn)
         {
             List<Gene> architeGenes = GetArchiteGenes(pawn);
@@ -58,7 +56,6 @@ namespace ArchiteGatherers
             return totalArchites;
         }
 
-        // 3. Проходим по списку ссылок, удаляем гены у пешки и считаем извлечённые архиты
         public static int ExtractAndRemoveArchiteGenes(Pawn pawn)
         {
             if (pawn?.genes == null) return 0;
@@ -90,12 +87,6 @@ namespace ArchiteGatherers
             if (corpse.GetRotStage() != RotStage.Fresh)
             {
                 failReason = "AG_CorpseRotted".Translate();
-                return false;
-            }
-
-            if (innerPawn.health?.hediffSet?.HasHediff(AG_DefOf.AG_ArchiteDrained) == true)
-            {
-                failReason = "AG_AlreadyDrained".Translate();
                 return false;
             }
 

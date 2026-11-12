@@ -41,7 +41,12 @@ namespace ArchiteGatherers
                 int totalCount = ArchiteUtility.ExtractAndRemoveArchiteGenes(corpse.InnerPawn);
                 if (totalCount <= 0) return;
 
-                corpse.InnerPawn.health.AddHediff(AG_DefOf.AG_ArchiteDrained);
+                // Записываем событие в журнал (Log) обеих пешек
+                Find.PlayLog.Add(new PlayLogEntry_Interaction(
+                    AG_DefOf.AG_ExtractArchiteInteraction,
+                    pawn,
+                    corpse.InnerPawn,
+                    null));
 
                 int remaining = totalCount;
                 int maxStack = Mathf.Max(1, ThingDefOf.ArchiteCapsule.stackLimit);

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<InteractionDef>
+		<defName>AG_ExtractArchiteInteraction</defName>
+		<label>archite extraction</label>
+		<symbol>Things/Item/Equipment/WeaponMelee/AG_ArchiteSyringe</symbol>
+		<logRulesInitiator>
+			<rulesStrings>
+				<li>r_logentry->[INITIATOR_nameDef] siphoned dormant archite nanites from [RECIPIENT_nameDef]'s body.</li>
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>
+
+</Defs>

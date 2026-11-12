@@ -4,7 +4,6 @@
 	<AG_ExtractMenuDisabled>Cannot extract archites from {0}: {1}</AG_ExtractMenuDisabled>
 	<AG_NotHumanlike>not humanlike</AG_NotHumanlike>
 	<AG_CorpseRotted>corpse is rotted</AG_CorpseRotted>
-	<AG_AlreadyDrained>already drained</AG_AlreadyDrained>
 	<AG_NoArchiteGenes>no archite genes</AG_NoArchiteGenes>
 	<AG_ExtractionSuccess>{0} has extracted {2} archite capsule(s) from {1}'s corpse.</AG_ExtractionSuccess>
 </LanguageData>

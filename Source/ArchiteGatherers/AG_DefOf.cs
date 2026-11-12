@@ -8,7 +8,7 @@ namespace ArchiteGatherers
     {
         public static ThingDef AG_ArchiteSyringe;
         public static JobDef AG_ExtractArchiteFromCorpse;
-        public static HediffDef AG_ArchiteDrained;
+        public static InteractionDef AG_ExtractArchiteInteraction;
 
         static AG_DefOf()
         {

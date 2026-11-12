@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<AG_ExtractArchiteInteraction.label>откачка архитов</AG_ExtractArchiteInteraction.label>
+	<AG_ExtractArchiteInteraction.logRulesInitiator.rulesStrings>
+		<li>r_logentry->[INITIATOR_nameDef] откачивает спящие наниты архитов из тела [RECIPIENT_nameDef].</li>
+	</AG_ExtractArchiteInteraction.logRulesInitiator.rulesStrings>
+
+</LanguageData>
