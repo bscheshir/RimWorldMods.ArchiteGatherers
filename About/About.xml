@@ -20,8 +20,12 @@
 	<description>
 		<![CDATA[
 Allows extracting archite capsules from corpses using a specialized device resembling a giant syringe.
+- Craftable at the Fabrication Bench (requires Archogenetics research and Crafting 8).
+- Rarely carried by high-tech melee fighters.
 
 Позволяет откачивать архиты с трупов посредством специального устройства, внешне похожего на гигантский шприц.
+- Создаётся на высокоточном станке (требуется исследование «Архогенетика» и навык ремесла 8).
+- Редко встречается у высокотехнологичных бойцов ближнего боя.
 
 -----------------------------------------
 Supported Languages:

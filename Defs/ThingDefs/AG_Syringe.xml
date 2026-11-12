@@ -15,6 +15,14 @@
 			<Mass>2.2</Mass>
 		</statBases>
 		<equippedAngleOffset>-65</equippedAngleOffset>
+		<generateCommonality>0.08</generateCommonality>
+		<weaponClasses>
+			<li>Melee</li>
+			<li>MeleePiercer</li>
+		</weaponClasses>
+		<weaponTags>
+			<li>UltratechMelee</li>
+		</weaponTags>
 		<costList>
 			<Plasteel>40</Plasteel>
 			<ComponentSpacer>2</ComponentSpacer>
