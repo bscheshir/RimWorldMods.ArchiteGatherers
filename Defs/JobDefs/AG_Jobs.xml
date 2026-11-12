@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<JobDef>
+		<defName>AG_ExtractArchiteFromCorpse</defName>
+		<driverClass>ArchiteGatherers.JobDriver_ExtractArchite</driverClass>
+		<reportString>extracting archites from TargetA.</reportString>
+		<casualInterruptible>false</casualInterruptible>
+	</JobDef>
+
+</Defs>

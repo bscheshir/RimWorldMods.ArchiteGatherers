@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<AG_ArchiteSyringe.label>архитовый шприц собирательницы</AG_ArchiteSyringe.label>
+	<AG_ArchiteSyringe.description>Тяжёлый промышленный экстракционный шприц, соединённый с герметичным резервуаром. Предназначен для прокола тканей погибших ксенолюдей и откачки спящих нанитов архитов в готовую к использованию капсулу.</AG_ArchiteSyringe.description>
+	<AG_ArchiteSyringe.tools.needle.label>игла</AG_ArchiteSyringe.tools.needle.label>
+	<AG_ArchiteSyringe.tools.cylinder.label>цилиндр</AG_ArchiteSyringe.tools.cylinder.label>
+
+</LanguageData>
