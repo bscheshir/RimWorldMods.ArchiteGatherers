@@ -25,7 +25,7 @@
 			<skillRequirements>
 				<Crafting>8</Crafting>
 			</skillRequirements>
-			<recipeUsers>
+			<recipeUsers Inherit="False">
 				<li>FabricationBench</li>
 			</recipeUsers>
 		</recipeMaker>
