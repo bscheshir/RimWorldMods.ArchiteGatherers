@@ -38,7 +38,7 @@ namespace ArchiteGatherers
                 Corpse corpse = TargetCorpse;
                 if (corpse?.InnerPawn == null) return;
 
-                int totalCount = ArchiteUtility.CountArchites(corpse.InnerPawn);
+                int totalCount = ArchiteUtility.ExtractAndRemoveArchiteGenes(corpse.InnerPawn);
                 if (totalCount <= 0) return;
 
                 corpse.InnerPawn.health.AddHediff(AG_DefOf.AG_ArchiteDrained);

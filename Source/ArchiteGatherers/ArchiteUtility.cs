@@ -25,20 +25,52 @@ namespace ArchiteGatherers
             return false;
         }
 
-        // Суммируем все вложенные в гены пешки архиты (включая подавленные)
-        public static int CountArchites(Pawn pawn)
+        // 1. Фильтруем гены и возвращаем новый список ссылок на архитовые гены
+        public static List<Gene> GetArchiteGenes(Pawn pawn)
         {
+            List<Gene> result = new List<Gene>();
             List<Gene> genes = pawn?.genes?.GenesListForReading;
-            if (genes == null) return 0;
+            if (genes == null) return result;
 
-            int totalArchites = 0;
             for (int i = 0; i < genes.Count; i++)
             {
                 Gene gene = genes[i];
                 if (gene != null && gene.def.biostatArc > 0)
                 {
-                    totalArchites += gene.def.biostatArc;
+                    result.Add(gene);
                 }
+            }
+
+            return result;
+        }
+
+        // 2. Проходим по списку ссылок и считаем сумму архитов
+        public static int CountArchites(Pawn pawn)
+        {
+            List<Gene> architeGenes = GetArchiteGenes(pawn);
+            int totalArchites = 0;
+
+            for (int i = 0; i < architeGenes.Count; i++)
+            {
+                totalArchites += architeGenes[i].def.biostatArc;
+            }
+
+            return totalArchites;
+        }
+
+        // 3. Проходим по списку ссылок, удаляем гены у пешки и считаем извлечённые архиты
+        public static int ExtractAndRemoveArchiteGenes(Pawn pawn)
+        {
+            if (pawn?.genes == null) return 0;
+
+            List<Gene> architeGenes = GetArchiteGenes(pawn);
+            int totalArchites = 0;
+
+            for (int i = 0; i < architeGenes.Count; i++)
+            {
+                Gene gene = architeGenes[i];
+                totalArchites += gene.def.biostatArc;
+                pawn.genes.RemoveGene(gene);
             }
 
             return totalArchites;
